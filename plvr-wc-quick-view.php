@@ -198,8 +198,8 @@ class PLVR_WC_Quick_View {
 	 */
 	function load_assets(){
 		$suffix = ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? '' : '.min';
-		wp_register_style('plvr-wc-quick-view', PLVR_WCQV_ASSETS.'/css/plvr-wc-quick-view{$suffix}.css', [], date('i'));
-		wp_register_script('plvr-wc-quick-view', PLVR_WCQV_ASSETS.'/js/plvr-wc-quick-view{$suffix}.js', ['jquery'], date('i'), true);
+		wp_register_style('plvr-wc-quick-view', PLVR_WCQV_ASSETS."/css/plvr-wc-quick-view{$suffix}.css", [], date('i'));
+		wp_register_script('plvr-wc-quick-view', PLVR_WCQV_ASSETS."/js/plvr-wc-quick-view{$suffix}.js", ['jquery'], date('i'), true);
 		wp_localize_script('plvr-wc-quick-view', 'jsobject', ['ajaxurl' => admin_url( 'admin-ajax.php' )]);
 		wp_enqueue_style('plvr-wc-quick-view');
 		wp_enqueue_script('plvr-wc-quick-view');
